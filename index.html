@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Johnny Empire — Digital Hub</title>
+<style>
+:root{--bg:#08090c;--card:#12151b;--gold:#d9b86c;--gold2:#f0d793;--text:#f7f7f5;--muted:#a9afba;--line:#2a2f38;--green:#25d366}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0,#302817,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,Arial,sans-serif}.wrap{width:min(1120px,92%);margin:auto}a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:9;background:#08090ce8;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:1.35rem}.logo span{color:var(--gold2)}nav{display:flex;gap:18px;align-items:center}nav a{color:#d9dce2;font-size:.9rem}nav a:hover{color:var(--gold2)}
+.searchbar{display:flex;gap:10px;max-width:760px;margin:0 auto 25px}.searchbar input{flex:1;margin:0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#0b0f15;color:white;font-size:1rem}.searchbar button{white-space:nowrap}.search-results{display:none;margin:0 auto 22px;max-width:760px;padding:15px;border:1px solid var(--line);border-radius:14px;background:#11161e}.search-results.show{display:block}.search-results p{margin:6px 0;color:var(--muted)}.search-results a{display:block;padding:8px 0;color:var(--gold2)}.no-result{color:var(--muted)}.btn{display:inline-block;border:1px solid var(--gold);border-radius:11px;padding:11px 17px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17130a;font-weight:800;cursor:pointer}.alt{background:transparent;color:var(--gold2)}.green{background:var(--green);border-color:var(--green)}
+.hero{text-align:center;padding:90px 0 70px}.pill{color:var(--gold2);border:1px solid #d9b86c55;background:#d9b86c10;padding:7px 12px;border-radius:999px;font-size:.75rem;font-weight:800}.hero h1{font-size:clamp(3rem,8vw,6rem);line-height:.94;letter-spacing:-4px;margin:22px auto;max-width:900px}.hero h1 span{color:var(--gold2)}.hero p{color:var(--muted);max-width:680px;margin:0 auto 28px;font-size:1.08rem}.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+section{padding:65px 0}.eyebrow{color:var(--gold);font-size:.72rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}.head{margin-bottom:25px}.head h2{font-size:2.35rem;margin:5px 0}.head p{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(180deg,#181d26,#101319);border:1px solid var(--line);border-radius:18px;padding:20px}.thumb{height:145px;border-radius:13px;background:linear-gradient(135deg,#302c20,#11151b);display:grid;place-items:center;font-size:2.4rem;margin-bottom:14px}.card p{color:var(--muted);font-size:.9rem}.meta{font-size:.75rem;color:#808896;margin:10px 0 14px}.price{font-size:1.3rem;color:var(--gold2);font-weight:900}.two{grid-template-columns:1fr 1fr}.about,.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px}.panel{background:#11161e;border:1px solid var(--line);border-radius:20px;padding:28px}.notice{padding:12px;border:1px solid #d9b86c35;background:#d9b86c0b;border-radius:11px;color:var(--muted);font-size:.86rem;margin-bottom:15px}input,textarea{width:100%;padding:13px;margin-bottom:10px;border-radius:10px;border:1px solid var(--line);background:#090c11;color:white}textarea{min-height:120px}
+footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted)}.wa{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#061108;font-size:1.4rem;font-weight:900;z-index:10}.modal{display:none;position:fixed;inset:0;background:#000b;z-index:20;place-items:center;padding:18px}.modal.show{display:grid}.modalbox{width:min(430px,100%);background:#12161d;border:1px solid var(--line);border-radius:20px;padding:25px;position:relative}.close{position:absolute;right:14px;top:10px;background:none;border:0;color:white;font-size:1.5rem}
+@media(max-width:800px){nav{display:none}.grid,.two,.about,.contact{grid-template-columns:1fr 1fr}.menu{display:block;background:none;border:1px solid var(--line);color:white;padding:8px;border-radius:9px}.nav.open nav{display:flex;position:absolute;top:65px;left:4%;right:4%;padding:18px;background:#11161d;border:1px solid var(--line);border-radius:14px;flex-direction:column}}
+@media(max-width:520px){.grid,.two,.about,.contact{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}}
+</style></head>
+<body>
+<header><div class="wrap nav" id="nav"><a class="logo" href="#home">Johnny<span>Empire</span></a><nav>
+<a href="#home">Home</a><a href="#videos">Videos</a><a href="#files">Files</a><a href="#ads">Ads</a><a href="#services">Services</a><a href="#support">Support</a><a href="#contact">Contact</a><button class="btn" onclick="login()">Login</button></nav><button class="menu" onclick="nav.classList.toggle('open')">Menu</button></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap"><span class="pill">ALL-IN-ONE DIGITAL HUB</span><h1>Welcome to <span>Johnny Empire</span></h1><p>Discover authorized videos, digital files, services and promotions — all in one premium platform.</p>
+<div class="searchbar">
+<input id="siteSearch" type="search" placeholder="Search videos, files, services, ads..." autocomplete="off">
+<button class="btn" onclick="runSearch()">Search</button>
+</div>
+<div id="searchResults" class="search-results"></div>
+<div class="actions"><a class="btn" href="#videos">Browse Downloads</a><a class="btn alt" href="#ads">Advertise With Us</a></div></div></section>
+<section id="videos"><div class="wrap"><div class="head"><div class="eyebrow">Digital library</div><h2>Video Downloads</h2><p>Use these listings for videos you own or are authorized to distribute.</p></div><div class="grid">
+<div class="card searchable" data-search="featured video video download free"><div class="thumb">▶</div><h3>Featured Video</h3><p>Add your video title and description here.</p><div class="meta">VIDEO • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
+<div class="card searchable" data-search="trending video video download free"><div class="thumb">▶</div><h3>Trending Video</h3><p>Replace this card with your authorized video.</p><div class="meta">VIDEO • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
+<div class="card searchable" data-search="premium video paid video download"><div class="thumb">★</div><h3>Premium Video</h3><p>Paid delivery will be connected to Paystack in the backend.</p><div class="meta">VIDEO • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
+</div></div></section>
+<section id="files"><div class="wrap"><div class="head"><div class="eyebrow">Downloads</div><h2>Files & Digital Products</h2></div><div class="grid">
+<div class="card searchable" data-search="free guide pdf file download free"><div class="thumb">PDF</div><h3>Free Guide</h3><p>Example PDF download listing.</p><div class="meta">PDF • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
+<div class="card searchable" data-search="template pack zip file digital product paid download"><div class="thumb">ZIP</div><h3>Template Pack</h3><p>Sell your own templates and resources.</p><div class="meta">ZIP • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
+<div class="card searchable" data-search="premium resource file paid download digital product"><div class="thumb">★</div><h3>Premium Resource</h3><p>Reserved for paid customers.</p><div class="meta">FILE • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
+</div></div></section>
+<section id="ads"><div class="wrap"><div class="head"><div class="eyebrow">Revenue</div><h2>Advertise With Johnny Empire</h2><p>Sell placements to businesses, creators and event organizers.</p></div><div class="grid two">
+<div class="card searchable" data-search="basic standard ad advertising promotion"><div class="eyebrow">Basic</div><h3>Standard Ad</h3><p>Simple promotional placement.</p><div class="price">₦5,000</div><br><a class="btn" target="_blank" href="https://wa.me/2349169385002?text=Hello%20Johnny%20Empire%2C%20I%20want%20to%20book%20a%20Standard%20Ad.">Book Ad</a></div>
+<div class="card searchable" data-search="premium featured ad advertising promotion"><div class="eyebrow">Premium</div><h3>Featured Ad</h3><p>Higher-visibility promotion.</p><div class="price">₦15,000</div><br><a class="btn" target="_blank" href="https://wa.me/2349169385002?text=Hello%20Johnny%20Empire%2C%20I%20want%20to%20book%20a%20Featured%20Ad.">Book Ad</a></div>
+</div></div></section>
+<section id="services"><div class="wrap"><div class="head"><div class="eyebrow">Services</div><h2>Johnny Empire Services</h2></div><div class="grid"><div class="card searchable" data-search="digital promotion service advertising"><h3>Digital Promotion</h3><p>Promote products, brands and events.</p></div><div class="card searchable" data-search="creative services design branding service"><h3>Creative Services</h3><p>Design, branding and digital content.</p></div><div class="card searchable" data-search="premium downloads digital products service"><h3>Premium Downloads</h3><p>Sell your own authorized digital products.</p></div></div></div></section>
+<section><div class="wrap about"><div><div class="eyebrow">About</div><h2>Built to grow into a marketplace.</h2><p style="color:var(--muted)">Johnny Empire V2 is designed around downloads, advertising, services, customers and paid digital content.</p></div><div class="panel"><h3>Start free, upgrade later</h3><p style="color:var(--muted)">This starter site is ready for the next technical layer: hosting, database, secure accounts, file storage, payment verification and an admin dashboard.</p></div></div></section>
+
+<section id="support">
+<div class="wrap">
+  <div class="head">
+    <div class="eyebrow">We're here to help</div>
+    <h2>Support Center</h2>
+    <p>Need help with a download, payment, account, advertising or anything on Johnny Empire? Contact us.</p>
+  </div>
+  <div class="grid two">
+    <div class="card">
+      <h3>💬 WhatsApp Support</h3>
+      <p>Chat directly with Johnny Empire for quick assistance.</p>
+      <br><a class="btn green" target="_blank" href="https://wa.me/2349169385002?text=Hello%20Johnny%20Empire%20Support%2C%20I%20need%20help.">Chat on WhatsApp</a>
+    </div>
+    <div class="card">
+      <h3>📧 Email Support</h3>
+      <p>Send detailed questions or issues by email.</p>
+      <br><a class="btn alt" href="mailto:johnnyempire12@gmail.com?subject=Johnny%20Empire%20Support">Email Support</a>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:18px">
+    <div class="eyebrow">FAQ</div>
+    <h3 style="margin:8px 0">Frequently Asked Questions</h3>
+    <details style="padding:12px 0;border-bottom:1px solid var(--line)">
+      <summary><strong>My download isn't working. What should I do?</strong></summary>
+      <p style="color:var(--muted)">Contact support through WhatsApp or email and include the name of the file/video and the problem you experienced.</p>
+    </details>
+    <details style="padding:12px 0;border-bottom:1px solid var(--line)">
+      <summary><strong>I paid but didn't receive my download. What should I do?</strong></summary>
+      <p style="color:var(--muted)">Keep your payment reference and contact support. Once the payment system is connected to the backend, payments can be automatically verified and downloads delivered.</p>
+    </details>
+    <details style="padding:12px 0">
+      <summary><strong>How can I advertise on Johnny Empire?</strong></summary>
+      <p style="color:var(--muted)">Choose an advertising package and contact us on WhatsApp to arrange your promotion.</p>
+    </details>
+  </div>
+</div>
+</section>
+
+<section id="contact"><div class="wrap contact"><div><div class="eyebrow">Contact</div><h2>Johnny Empire</h2><p style="color:var(--muted)">WhatsApp: +234 916 938 5002<br>Email: johnnyempire12@gmail.com</p><br><a class="btn green" target="_blank" href="https://wa.me/2349169385002">WhatsApp</a></div><form onsubmit="event.preventDefault();alert('Demo submitted. A backend/email connection is needed for real submissions.');this.reset()"><input required placeholder="Your name"><input required type="email" placeholder="Email"><textarea required placeholder="Message"></textarea><button class="btn">Send Message</button></form></div></section>
+</main><a class="wa" target="_blank" href="https://wa.me/2349169385002">✆</a><footer>© 2026 Johnny Empire • All rights reserved.</footer>
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeLogin()">×</button><div class="eyebrow">Customer area</div><h2>Login / Register</h2><div class="notice">This interface is ready for secure backend authentication.</div><input placeholder="Email"><input type="password" placeholder="Password"><button class="btn" style="width:100%" onclick="demo('Account')">Continue</button></div></div>
+<script>
+function demo(x){alert(x+' is prepared in this V2 starter. The secure backend/payment/file-delivery layer must be connected before it can process real transactions.')}
+function login(){modal.classList.add('show')}
+function closeLogin(){modal.classList.remove('show')}
+const searchInput=document.getElementById('siteSearch');
+const results=document.getElementById('searchResults');
+const items=[...document.querySelectorAll('.searchable')];
+function runSearch(){
+  const q=searchInput.value.trim().toLowerCase();
+  if(!q){results.classList.remove('show');results.innerHTML='';items.forEach(x=>x.style.display='');return;}
+  const matches=items.filter(x=>(x.dataset.search+' '+x.innerText).toLowerCase().includes(q));
+  items.forEach(x=>x.style.display=matches.includes(x)?'block':'none');
+  results.classList.add('show');
+  if(!matches.length){results.innerHTML='<p class="no-result">No results found for <strong>'+escapeHtml(searchInput.value)+'</strong>. Try another word.</p>';return;}
+  results.innerHTML='<p><strong>'+matches.length+'</strong> result(s) found:</p>'+matches.slice(0,8).map(x=>'<a href="#'+(x.closest('section')?.id||'')+'">'+escapeHtml(x.querySelector('h3')?.innerText||'Result')+'</a>').join('');
+}
+function escapeHtml(t){return t.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+searchInput.addEventListener('keydown',e=>{if(e.key==='Enter')runSearch()});
+searchInput.addEventListener('input',()=>{if(!searchInput.value.trim()){runSearch()}});
+</script>
+</body></html>
