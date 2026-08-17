@@ -45,7 +45,39 @@ footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:v
   #books .media img{
     max-height:400px;
   }
-}</style></head>
+}
+@media (max-width:520px){
+  section{
+    padding:35px 12px;
+  }
+
+  #ads{
+    padding-bottom:20px;
+  }
+
+  #books{
+    padding-top:25px;
+  }
+
+  #books .grid{
+    gap:16px;
+  }
+
+  #books .card{
+    width:100%;
+  }
+
+  #books .media{
+    max-width:100%;
+    margin:auto;
+  }
+
+  #books .media img{
+    width:100%;
+    max-height:380px;
+    object-fit:contain;
+  }
+  </style></head>
 <body>
 <header><div class="wrap nav" id="nav"><a class="logo" href="#home">Johnny<span>Empire</span></a><nav>
 <a href="#home">Home</a><a href="#videos">Videos</a><a href="#files">Files</a><a href="#books">Book Shopping</a><a href="#ads">Ads</a><a href="#services">Services</a><a href="#support">Support</a><a href="#contact">Contact</a><button class="btn" onclick="login()">Login</button></nav><button class="menu" onclick="nav.classList.toggle('open')">Menu</button></div></header>
