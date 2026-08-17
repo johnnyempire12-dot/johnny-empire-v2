@@ -13,7 +13,39 @@ section{padding:65px 0}.eyebrow{color:var(--gold);font-size:.72rem;font-weight:9
 footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted)}.wa{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#061108;font-size:1.4rem;font-weight:900;z-index:10}.modal{display:none;position:fixed;inset:0;background:#000b;z-index:20;place-items:center;padding:18px}.modal.show{display:grid}.modalbox{width:min(430px,100%);background:#12161d;border:1px solid var(--line);border-radius:20px;padding:25px;position:relative}.close{position:absolute;right:14px;top:10px;background:none;border:0;color:white;font-size:1.5rem}
 @media(max-width:800px){nav{display:none}.grid,.two,.about,.contact{grid-template-columns:1fr 1fr}.menu{display:block;background:none;border:1px solid var(--line);color:white;padding:8px;border-radius:9px}.nav.open nav{display:flex;position:absolute;top:65px;left:4%;right:4%;padding:18px;background:#11161d;border:1px solid var(--line);border-radius:14px;flex-direction:column}}
 @media(max-width:520px){.grid,.two,.about,.contact{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}}
-</style></head>
+#books .media{
+  max-width:420px;
+  margin:0 auto 25px;
+  overflow:hidden;
+  border-radius:18px;
+}
+
+#books .media img{
+  width:100%;
+  height:auto;
+  max-height:520px;
+  object-fit:contain;
+  display:block;
+}
+
+#books .card h3{
+  font-size:1.35rem;
+  margin-bottom:12px;
+}
+
+#books .card strong{
+  font-size:1.25rem;
+}
+
+@media(max-width:520px){
+  #books .media{
+    max-width:280px;
+  }
+
+  #books .media img{
+    max-height:400px;
+  }
+}</style></head>
 <body>
 <header><div class="wrap nav" id="nav"><a class="logo" href="#home">Johnny<span>Empire</span></a><nav>
 <a href="#home">Home</a><a href="#videos">Videos</a><a href="#files">Files</a><a href="#books">Book Shopping</a><a href="#ads">Ads</a><a href="#services">Services</a><a href="#support">Support</a><a href="#contact">Contact</a><button class="btn" onclick="login()">Login</button></nav><button class="menu" onclick="nav.classList.toggle('open')">Menu</button></div></header>
