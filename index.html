@@ -80,7 +80,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:v
   </style></head>
 <body>
 <header><div class="wrap nav" id="nav"><a class="logo" href="#home">Johnny<span>Empire</span></a><nav>
-<a href="#home">Home</a><a href="#videos">Videos</a><a href="#files">Files</a><a href="#books">Book Shopping</a><a href="#ads">Ads</a><a href="#services">Services</a><a href="#support">Support</a><a href="#contact">Contact</a><button class="btn" onclick="login()">Login</button></nav><button class="menu" onclick="nav.classList.toggle('open')">Menu</button></div></header>
+<a href="#home">Home</a><a href="#books">Book Shopping</a><a href="#videos">Videos</a><a href="#files">Files</a><a href="#ads">Ads</a><a href="#services">Services</a><a href="#support">Support</a><a href="#contact">Contact</a><button class="btn" onclick="login()">Login</button></nav><button class="menu" onclick="nav.classList.toggle('open')">Menu</button></div></header>
 <main>
 <section class="hero" id="home"><div class="wrap"><span class="pill">ALL-IN-ONE DIGITAL HUB</span><h1>Welcome to <span>Johnny Empire</span></h1><p>Discover authorized videos, digital files, services and promotions — all in one premium platform.</p>
 <div class="searchbar">
@@ -88,21 +88,6 @@ footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:v
 <button class="btn" onclick="runSearch()">Search</button>
 </div>
 <div id="searchResults" class="search-results"></div>
-<div class="actions"><a class="btn" href="#videos">Browse Downloads</a><a class="btn alt" href="#ads">Advertise With Us</a></div></div></section>
-<section id="videos"><div class="wrap"><div class="head"><div class="eyebrow">Digital library</div><h2>Video Downloads</h2><p>Use these listings for videos you own or are authorized to distribute.</p></div><div class="grid">
-<div class="card searchable" data-search="featured video video download free"><div class="thumb">▶</div><h3>Featured Video</h3><p>Add your video title and description here.</p><div class="meta">VIDEO • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
-<div class="card searchable" data-search="trending video video download free"><div class="thumb">▶</div><h3>Trending Video</h3><p>Replace this card with your authorized video.</p><div class="meta">VIDEO • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
-<div class="card searchable" data-search="premium video paid video download"><div class="thumb">★</div><h3>Premium Video</h3><p>Paid delivery will be connected to Paystack in the backend.</p><div class="meta">VIDEO • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
-</div></div></section>
-<section id="files"><div class="wrap"><div class="head"><div class="eyebrow">Downloads</div><h2>Files & Digital Products</h2></div><div class="grid">
-<div class="card searchable" data-search="free guide pdf file download free"><div class="thumb">PDF</div><h3>Free Guide</h3><p>Example PDF download listing.</p><div class="meta">PDF • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
-<div class="card searchable" data-search="template pack zip file digital product paid download"><div class="thumb">ZIP</div><h3>Template Pack</h3><p>Sell your own templates and resources.</p><div class="meta">ZIP • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
-<div class="card searchable" data-search="premium resource file paid download digital product"><div class="thumb">★</div><h3>Premium Resource</h3><p>Reserved for paid customers.</p><div class="meta">FILE • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
-</div></div></section>
-<section id="ads"><div class="wrap"><div class="head"><div class="eyebrow">Revenue</div><h2>Advertise With Johnny Empire</h2><p>Sell placements to businesses, creators and event organizers.</p></div><div class="grid two">
-<div class="card searchable" data-search="basic standard ad advertising promotion"><div class="eyebrow">Basic</div><h3>Standard Ad</h3><p>Simple promotional placement.</p><div class="price">₦5,000</div><br><a class="btn" target="_blank" href="https://wa.me/2349169385002?text=Hello%20Johnny%20Empire%2C%20I%20want%20to%20book%20a%20Standard%20Ad.">Book Ad</a></div>
-<div class="card searchable" data-search="premium featured ad advertising promotion"><div class="eyebrow">Premium</div><h3>Featured Ad</h3><p>Higher-visibility promotion.</p><div class="price">₦15,000</div><br><a class="btn" target="_blank" href="https://wa.me/2349169385002?text=Hello%20Johnny%20Empire%2C%20I%20want%20to%20book%20a%20Featured%20Ad.">Book Ad</a></div>
-</div></div></section>
 <section id="services"><section id="books">
   <div class="wrap">
     <div class="head">
@@ -133,7 +118,22 @@ footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:v
   <button class="btn" onclick="demo('Book purchase')">Buy Book</button>
       </div>
 
-      <div class="card searchable" data-search="business book">
+  <div class="actions"><a class="btn" href="#videos">Browse Downloads</a><a class="btn alt" href="#ads">Advertise With Us</a></div></div></section>
+<section id="videos"><div class="wrap"><div class="head"><div class="eyebrow">Digital library</div><h2>Video Downloads</h2><p>Use these listings for videos you own or are authorized to distribute.</p></div><div class="grid">
+<div class="card searchable" data-search="featured video video download free"><div class="thumb">▶</div><h3>Featured Video</h3><p>Add your video title and description here.</p><div class="meta">VIDEO • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
+<div class="card searchable" data-search="trending video video download free"><div class="thumb">▶</div><h3>Trending Video</h3><p>Replace this card with your authorized video.</p><div class="meta">VIDEO • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
+<div class="card searchable" data-search="premium video paid video download"><div class="thumb">★</div><h3>Premium Video</h3><p>Paid delivery will be connected to Paystack in the backend.</p><div class="meta">VIDEO • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
+</div></div></section>
+<section id="files"><div class="wrap"><div class="head"><div class="eyebrow">Downloads</div><h2>Files & Digital Products</h2></div><div class="grid">
+<div class="card searchable" data-search="free guide pdf file download free"><div class="thumb">PDF</div><h3>Free Guide</h3><p>Example PDF download listing.</p><div class="meta">PDF • FREE</div><button class="btn" onclick="demo('Download')">Download</button></div>
+<div class="card searchable" data-search="template pack zip file digital product paid download"><div class="thumb">ZIP</div><h3>Template Pack</h3><p>Sell your own templates and resources.</p><div class="meta">ZIP • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
+<div class="card searchable" data-search="premium resource file paid download digital product"><div class="thumb">★</div><h3>Premium Resource</h3><p>Reserved for paid customers.</p><div class="meta">FILE • PAID</div><button class="btn alt" onclick="demo('Payment')">Pay & Download</button></div>
+</div></div></section>
+<section id="ads"><div class="wrap"><div class="head"><div class="eyebrow">Revenue</div><h2>Advertise With Johnny Empire</h2><p>Sell placements to businesses, creators and event organizers.</p></div><div class="grid two">
+<div class="card searchable" data-search="basic standard ad advertising promotion"><div class="eyebrow">Basic</div><h3>Standard Ad</h3><p>Simple promotional placement.</p><div class="price">₦5,000</div><br><a class="btn" target="_blank" href="https://wa.me/2349169385002?text=Hello%20Johnny%20Empire%2C%20I%20want%20to%20book%20a%20Standard%20Ad.">Book Ad</a></div>
+<div class="card searchable" data-search="premium featured ad advertising promotion"><div class="eyebrow">Premium</div><h3>Featured Ad</h3><p>Higher-visibility promotion.</p><div class="price">₦15,000</div><br><a class="btn" target="_blank" href="https://wa.me/2349169385002?text=Hello%20Johnny%20Empire%2C%20I%20want%20to%20book%20a%20Featured%20Ad.">Book Ad</a></div>
+</div></div></section>
+    <div class="card searchable" data-search="business book">
         <div class="media">📖</div>
         <h3>Business Guide</h3>
         <p>A practical guide for building and growing your digital business.</p>
